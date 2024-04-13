@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@repo/ui/button";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 
 const API_HOST = process.env.NEXT_PUBLIC_API_HOST || "http://localhost:3001";
@@ -40,13 +41,13 @@ export default function Web() {
       <h1>Web</h1>
       <form onSubmit={onSubmit}>
         <label htmlFor="name">Name </label>
-        <input
+        <Input
           type="text"
           name="name"
           id="name"
           value={name}
           onChange={onChange}
-        ></input>
+        ></Input>
         <Button type="submit">Submit</Button>
       </form>
       {error && (
